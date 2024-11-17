@@ -6,6 +6,7 @@ import { PAGE_SIZE } from '../constants/constants'
 import MainGridLayout from '../layouts/MainGridLayout.astro'
 import { getSortedPosts } from '../utils/content-utils'
 
+
 export const getStaticPaths = (async ({ paginate }) => {
   const allBlogPosts = await getSortedPosts()
   return paginate(allBlogPosts, { pageSize: PAGE_SIZE })
